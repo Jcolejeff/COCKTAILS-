@@ -5,11 +5,11 @@ Variables
 */
 :root {
   --primaryLightColor: #d4e6a5;
-  --primaryColor: #476a2e;
+  --primaryColor: #c02c03;
   --primaryDarkColor: #c02c03;
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
-  --mainBackground: #f1f5f8;
+  --mainBackground: #151d3b;
   --mainOverlay: rgba(35, 10, 36, 0.4);
   --mainBlack: #222;
   --mainGrey: #ececec;
@@ -212,6 +212,7 @@ Cocktails List
   text-align: center;
   margin-bottom: 3.5rem;
   margin-top: 1rem;
+  color: aliceblue;
 }
 .cocktails-center {
   width: var(--smallWidth);
@@ -220,6 +221,7 @@ Cocktails List
   display: grid;
   row-gap: 2rem;
   column-gap: 2rem;
+
   /* align-items: start; */
 }
 @media screen and (min-width: 576px) {
@@ -302,6 +304,7 @@ Form
   border-radius: var(--mainBorderRadius);
   padding: 0.5rem;
   font-size: 1.2rem;
+  color: aliceblue;
 }
 /* 
 ====== 
@@ -325,6 +328,7 @@ Cocktail
   font-weight: bold;
   text-transform: capitalize;
   line-height: 1.8;
+  color: aliceblue;
 }
 .drink span {
   margin-right: 0.5rem;
@@ -390,11 +394,11 @@ Cocktail
   80%,
   100% {
     box-shadow: 0 0;
-    height: 4em;
+    height: 1em;
   }
   40% {
     box-shadow: 0 -2em;
-    height: 5em;
+    height: 1em;
   }
 }
 @keyframes load1 {
@@ -402,10 +406,10 @@ Cocktail
   80%,
   100% {
     box-shadow: 0 0;
-    height: 4em;
+    height: 1em;
   }
   40% {
     box-shadow: 0 -2em;
-    height: 5em;
+    height: 1em;
   }
 }
