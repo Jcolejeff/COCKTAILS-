@@ -199,7 +199,7 @@ Error
 }
 /* 
 ====== 
-Cocktails List 
+Comics List 
 ======
 */
 
@@ -215,7 +215,7 @@ Cocktails List
   margin-top: 1rem;
   color: aliceblue;
 }
-.cocktails-center {
+.Comics-center {
   width: var(--smallWidth);
   margin: 0 auto;
   max-width: var(--fullWidth);
@@ -226,17 +226,17 @@ Cocktails List
   /* align-items: start; */
 }
 @media screen and (min-width: 576px) {
-  .cocktails-center {
+  .Comics-center {
     grid-template-columns: repeat(auto-fill, minmax(338.8px, 1fr));
   }
 }
 /* 
 ====== 
-Cocktail 
+Comic 
 ======
 */
 
-.cocktail {
+.Comic {
   background: var(--mainWhite);
   margin-bottom: 2rem;
   box-shadow: var(--lightShadow);
@@ -245,27 +245,27 @@ Cocktail
   grid-template-rows: auto 1fr;
   border-radius: var(--mainBorderRadius);
 }
-.cocktail:hover {
+.Comic:hover {
   box-shadow: var(--darkShadow);
 }
-.cocktail img {
+.Comic img {
   height: 20rem;
   object-fit: cover;
   border-top-left-radius: var(--mainBorderRadius);
   border-top-right-radius: var(--mainBorderRadius);
 }
-.cocktail-footer {
+.Comic-footer {
   padding: 1.5rem;
 }
-.cocktail-footer h3,
-.cocktail-footer h4,
-.cocktail-footer p {
+.Comic-footer h3,
+.Comic-footer h4,
+.Comic-footer p {
   margin-bottom: 0.3rem;
 }
-.cocktail-footer h3 {
+.Comic-footer h3 {
   font-size: 2rem;
 }
-.cocktail-footer p {
+.Comic-footer p {
   color: var(--darkGrey);
   margin-bottom: 0.5rem;
 }
@@ -309,48 +309,48 @@ Form
 }
 /* 
 ====== 
-Cocktail
+Comic
 ======
 */
 
-.cocktail-section {
+.Comic-section {
   text-align: center;
 }
-.drink {
+.Comics {
   width: var(--smallWidth);
   max-width: var(--fullWidth);
   margin: 0 auto;
   text-align: left;
 }
-.drink img {
+.Comics img {
   border-radius: var(--mainBorderRadius);
 }
-.drink p {
+.Comics p {
   font-weight: bold;
   text-transform: capitalize;
   line-height: 1.8;
   color: aliceblue;
 }
-.drink span {
+.Comics span {
   margin-right: 0.5rem;
 }
-.drink-data {
+.Comics-data {
   background: var(--primaryLightColor);
   padding: 0.25rem 0.5rem;
   border-radius: var(--mainBorderRadius);
   color: var(--primaryColor);
 }
-.drink-info {
+.Comics-info {
   padding-top: 2rem;
 }
 @media screen and (min-width: 992px) {
-  .drink {
+  .Comics {
     display: grid;
     grid-template-columns: 2fr 3fr;
     gap: 3rem;
     align-items: center;
   }
-  .drink-info {
+  .Comics-info {
     padding-top: 0;
   }
 }

@@ -1,14 +1,14 @@
 import React from "react";
-import Cocktail from "./Cocktail";
+import Comic from "./Comic";
 import Loading from "./Loading";
 import { useGlobalContext } from "../context";
 
-export default function CocktailList() {
-  const { cocktails, loading } = useGlobalContext();
+export default function ComicList() {
+  const { Comics, loading } = useGlobalContext();
   if (loading) {
     return <Loading />;
   }
-  if (cocktails.length < 1) {
+  if (Comics.length < 1) {
     return (
       <h2 className="section-title">no comics matched your search criteria</h2>
     );
@@ -16,9 +16,9 @@ export default function CocktailList() {
   return (
     <section className="section">
       <h2 className="section-title">COMICS</h2>
-      <div className="cocktails-center">
-        {cocktails.map((item) => {
-          return <Cocktail key={item.id} {...item} />;
+      <div className="Comics-center">
+        {Comics.map((item) => {
+          return <Comic key={item.id} {...item} />;
         })}
       </div>
     </section>

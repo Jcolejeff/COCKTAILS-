@@ -8,9 +8,9 @@ const AppContext = React.createContext();
 const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("deadpool");
-  const [cocktails, setCocktails] = useState([]);
+  const [Comics, setComics] = useState([]);
 
-  const fetchDrinks = async () => {
+  const fetchComicss = async () => {
     setLoading(true);
     try {
       const response = await fetch(`${url}${searchTerm}${others}`);
@@ -18,10 +18,10 @@ const AppProvider = ({ children }) => {
       console.log(comics);
       const { data } = comics;
       if (data.results) {
-        const newCocktails = data.results;
-        setCocktails(newCocktails);
+        const newComics = data.results;
+        setComics(newComics);
       } else {
-        setCocktails([]);
+        setComics([]);
       }
       setLoading(false);
     } catch (error) {
@@ -30,13 +30,11 @@ const AppProvider = ({ children }) => {
     }
   };
   useEffect(() => {
-    fetchDrinks();
+    fetchComicss();
     // eslint-disable-next-line
   }, [searchTerm]);
   return (
-    <AppContext.Provider
-      value={{ loading, cocktails, searchTerm, setSearchTerm }}
-    >
+    <AppContext.Provider value={{ loading, Comics, searchTerm, setSearchTerm }}>
       {children}
     </AppContext.Provider>
   );

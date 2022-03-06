@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // import pages
 import Home from "./pages/Home";
 import About from "./pages/About";
-import SingleCocktail from "./pages/SingleCocktail";
+import SingleComic from "./pages/SingleComic";
 import Error from "./pages/Error";
 // import components
 import Navbar from "./components/Navbar";
@@ -16,7 +16,7 @@ function App() {
 
         <Route path="/about" element={<About />} />
 
-        <Route path="/cocktail/:id" element={<SingleCocktail />} />
+        <Route path="/Comic/:id" element={<SingleComic />} />
 
         <Route path="*" element={<Error />} />
       </Routes>

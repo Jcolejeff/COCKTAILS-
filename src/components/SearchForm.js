@@ -4,7 +4,7 @@ export default function SearchForm() {
   const { setSearchTerm } = useGlobalContext();
   const searchValue = React.useRef("");
 
-  function searchCocktail() {
+  function searchComic() {
     setSearchTerm(searchValue.current.value);
   }
   function handleSubmit(e) {
@@ -20,7 +20,7 @@ export default function SearchForm() {
             name="name"
             id="name"
             ref={searchValue}
-            onChange={searchCocktail}
+            onChange={searchComic}
           />
         </div>
       </form>

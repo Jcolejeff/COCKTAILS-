@@ -1,11 +1,11 @@
-import React from 'react'
-import CocktailList from '../components/CocktailList'
-import SearchForm from '../components/SearchForm'
+import React from "react";
+import ComicList from "../components/ComicList";
+import SearchForm from "../components/SearchForm";
 export default function Home() {
   return (
     <main>
       <SearchForm />
-      <CocktailList />
+      <ComicList />
     </main>
-  )
+  );
 }
