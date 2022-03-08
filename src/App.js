@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import SingleComic from "./pages/SingleComic";
 import Error from "./pages/Error";
-// import components
+// import component
 import Navbar from "./components/Navbar";
 function App() {
   return (
