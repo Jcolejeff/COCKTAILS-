@@ -12,7 +12,7 @@ export default function SingleComic() {
     async function getComic() {
       try {
         const response = await fetch(
-          `https://gateway.marvel.com/v1/public/comics/${id}?ts=9876543210&apikey=16f5ce711c60cf13df8dc66c68c033e5&hash=594299813a04d5c4df98979f511c5d1f`
+          `https://gateway.marvel.com/v1/public/comics/${id}${process.env.REACT_APP_COMICSS_API_KEY}`
         );
 
         const comic = await response.json();
