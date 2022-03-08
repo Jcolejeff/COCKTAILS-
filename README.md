@@ -14,7 +14,7 @@ A webapp for searching your favourite marvel comics
 
 ### Screenshot
 
-![](./screenshot.png)
+![](./screenshot.jpg)
 
 ### Links
 
