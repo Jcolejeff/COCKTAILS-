@@ -1,8 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 
 const url = "https://gateway.marvel.com/v1/public/comics?title=";
-const others =
-  "&limit=15&ts=987654321&apikey=16f5ce711c60cf13df8dc66c68c033e5&hash=668a57c5b77fd36a3b598d7efe175c8c";
+const others = `${process.env.REACT_APP_COMIC_API_KEY}`;
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
@@ -10,7 +9,7 @@ const AppProvider = ({ children }) => {
   const [searchTerm, setSearchTerm] = useState("deadpool");
   const [Comics, setComics] = useState([]);
 
-  const fetchComicss = async () => {
+  const fetchComics = async () => {
     setLoading(true);
     try {
       const response = await fetch(`${url}${searchTerm}${others}`);
@@ -30,7 +29,7 @@ const AppProvider = ({ children }) => {
     }
   };
   useEffect(() => {
-    fetchComicss();
+    fetchComics();
     // eslint-disable-next-line
   }, [searchTerm]);
   return (
@@ -39,7 +38,7 @@ const AppProvider = ({ children }) => {
     </AppContext.Provider>
   );
 };
-// make sure use
+// hook that returns our store
 export const useGlobalContext = () => {
   return useContext(AppContext);
 };

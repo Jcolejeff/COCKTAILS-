@@ -14,6 +14,7 @@ export default function SingleComic() {
         const response = await fetch(
           `https://gateway.marvel.com/v1/public/comics/${id}?ts=9876543210&apikey=16f5ce711c60cf13df8dc66c68c033e5&hash=594299813a04d5c4df98979f511c5d1f`
         );
+
         const comic = await response.json();
         if (comic.data.results) {
           const newComic = comic.data.results;
